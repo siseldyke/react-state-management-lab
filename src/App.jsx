@@ -84,6 +84,10 @@ const App = () => {
     <>
     <h1>Zombie Fighters</h1>
     <h2>Money: {money}</h2>
+    <h2>Team Strength:</h2>
+    <h2>Team Agility:</h2>
+    <h2>Team</h2>
+    <h2>Fighters</h2>
     <ul>
     {zombieFighters.map((zombieFighter) => (
       <ZombieFighterList
