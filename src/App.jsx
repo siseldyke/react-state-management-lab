@@ -83,12 +83,17 @@ const App = () => {
     const [zombieFighters, setZombieFighters] = useState(zombieFightersArray);
    
     const handleAddFighter =(fighter) => {
+
+      const updatedTotal = money - fighter.price
+      setMoney(updatedTotal)
+
       const updatedTeam = [...team, fighter]
       setTeam(updatedTeam)
     }
 
   return (
     <>
+      <h2>Total: {money}</h2>
       <ZombieFighterList 
         zombieFighters={zombieFighters}
         handleAddFighter={handleAddFighter}
