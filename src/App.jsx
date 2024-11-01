@@ -5,9 +5,9 @@ import ZombieFighterList from './components/ZombieFighterList/ZombieFighterList.
 
 const App = () => {
 
-    const team =[]
-    const money = 100
-    const zombieFighters =[
+    const [team, setTeam] = useState([])
+    const [money, setMoney] = useState(100)
+    const [zombieFighters, setZombieFighters] = useState( [
       {
         name: 'Survivor',
         price: 12,
@@ -78,8 +78,8 @@ const App = () => {
         agility: 6,
         img: 'https://via.placeholder.com/150/602b9e',
       },
-    ];
-    
+    ]);
+   
   return (
     <>
     <h1>Zombie Fighters</h1>
@@ -93,10 +93,12 @@ const App = () => {
       <ZombieFighterList
       key = {zombieFighter.id}
       zombieFighter ={zombieFighter}
+      
       />
+      
     ))}
-
-
+    
+    
     </ul>
 
   </>

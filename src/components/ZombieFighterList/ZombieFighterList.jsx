@@ -1,7 +1,11 @@
-
+// import handleAddFighter from './src/App.jsx'
 
 const ZombieFighterList = (props)=> {
     const {zombieFighter} = props
+    const handleAddFighter  =(addZombieFighter) =>{
+        const newFighterArray= [...team, addZombieFighter]
+        setZombieFighters(newFighterArray)
+      }
 return (
     
     <ul>
@@ -11,7 +15,7 @@ return (
         <li>Strength: {zombieFighter.strength}</li>
         <li>Agility: {zombieFighter.agility}</li>
         
-        <li><button>Add</button></li>
+        <li><button onClick={() => handleAddFighter({zombieFighter})}>Add</button></li>
     </ul>
 
 )
