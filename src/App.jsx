@@ -104,7 +104,7 @@ const App = () => {
       
     }
 
-    const handleRemoveFighter =(fighter) => {
+    const handleRemoveTeamMember =(fighter) => {
 
       const updatedTotal = money + fighter.price
       setMoney(updatedTotal)
@@ -130,10 +130,10 @@ const App = () => {
       <ZombieFighterList 
         zombieFighters={zombieFighters}
         handleAddFighter={handleAddFighter}
-        handleRemoveFighter ={handleRemoveFighter}
+        
       />
       <h2>Your Team</h2>
-      {team.length === 0 ? <h3>Pick some Fighters!</h3> : <TeamList team={team}/>}
+      {team.length === 0 ? <h3>Pick some Fighters!</h3> : <TeamList team={team} handleRemoveFighter ={handleRemoveTeamMember}/>}
     </>
       
     )
