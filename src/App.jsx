@@ -85,19 +85,51 @@ const App = () => {
     const handleAddFighter =(fighter) => {
 
       const updatedTotal = money - fighter.price
+      if (money < fighter.price) {
+        console.log("Not enough money")
+      } 
       setMoney(updatedTotal)
+
+      const teamStrengthTotal = totalStrength + fighter.strength
+      setTotalStrength(teamStrengthTotal)
+
+      const teamAgilityTotal = totalAgility + fighter.agility
+      setTotalAgility(teamAgilityTotal)
 
       const updatedTeam = [...team, fighter]
       setTeam(updatedTeam)
+
+      
+    }
+
+    const handleRemoveFighter =(fighter) => {
+
+      const updatedTotal = money + fighter.price
+      setMoney(updatedTotal)
+
+      const teamStrengthTotal = totalStrength - fighter.strength
+      setTotalStrength(teamStrengthTotal)
+
+      const teamAgilityTotal = totalAgility - fighter.agility
+      setTotalAgility(teamAgilityTotal)
+
+      const updatedTeam = [...team, fighter]
+      setTeam(updatedTeam)
+
+      
     }
 
   return (
     <>
+      <h1>Zombie Fighters</h1>
       <h2>Total: {money}</h2>
       <ZombieFighterList 
         zombieFighters={zombieFighters}
         handleAddFighter={handleAddFighter}
+        handleRemoveFighter ={handleRemoveFighter}
       />
+      <h2>Your Team</h2>
+      
     </>
       
     )
