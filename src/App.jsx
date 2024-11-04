@@ -2,6 +2,8 @@
 import { useState } from 'react'
 import './App.css'
 import ZombieFighterList from './components/ZombieFighterList/ZombieFighterList.jsx'
+import TeamList from './components/TeamList.jsx'
+
 
 const App = () => {
   const zombieFighters =[{
@@ -118,7 +120,7 @@ const App = () => {
 
       
     }
-
+      
   return (
     <>
       <h1>Zombie Fighters</h1>
@@ -131,7 +133,7 @@ const App = () => {
         handleRemoveFighter ={handleRemoveFighter}
       />
       <h2>Your Team</h2>
-      
+      {team.length === 0 ? <h3>Pick some Fighters!</h3> : <TeamList team={team}/>}
     </>
       
     )
