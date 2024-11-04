@@ -123,6 +123,8 @@ const App = () => {
     <>
       <h1>Zombie Fighters</h1>
       <h2>Total: {money}</h2>
+      <h2>Team Strength: {totalStrength}</h2>
+      <h2>Team Agility: {totalAgility}</h2>
       <ZombieFighterList 
         zombieFighters={zombieFighters}
         handleAddFighter={handleAddFighter}
