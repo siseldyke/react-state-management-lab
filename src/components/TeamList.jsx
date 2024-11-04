@@ -13,7 +13,7 @@ const TeamList = (props)=> {
                 <h2>price: {teamMember.price}</h2>
                 <h2>str: {teamMember.strength}</h2>
                 <h2>agi: {teamMember.agility}</h2>
-                <button onClick={()=>{props.handleRemoveFighter(teamMember)}}>Remove</button>
+                <button onClick={()=>{props.handleRemoveTeamMember(teamMember)}}>Remove</button>
             </div>
            ))}
         </ul>

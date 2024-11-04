@@ -115,7 +115,7 @@ const App = () => {
       const teamAgilityTotal = totalAgility - fighter.agility
       setTotalAgility(teamAgilityTotal)
 
-      const updatedTeam = [...team, fighter]
+      const updatedTeam = [...team]
       setTeam(updatedTeam)
 
       
@@ -130,10 +130,10 @@ const App = () => {
       <ZombieFighterList 
         zombieFighters={zombieFighters}
         handleAddFighter={handleAddFighter}
-        
+        handleRemoveTeamMember ={handleRemoveTeamMember}
       />
       <h2>Your Team</h2>
-      {team.length === 0 ? <h3>Pick some Fighters!</h3> : <TeamList team={team} handleRemoveFighter ={handleRemoveTeamMember}/>}
+      {team.length === 0 ? <h3>Pick some Fighters!</h3> : <TeamList team={team} handleRemoveTeamMember ={handleRemoveTeamMember}/>}
     </>
       
     )
