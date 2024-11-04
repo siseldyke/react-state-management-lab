@@ -10,6 +10,7 @@ return (
         
        {props.zombieFighters.map((zombieFighter)=>(
         <div>
+            <img src ={zombieFighter.img} />
             <h1>{zombieFighter.name}</h1>
             <h2>price: {zombieFighter.price}</h2>
             <h2>str: {zombieFighter.strength}</h2>

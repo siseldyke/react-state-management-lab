@@ -4,7 +4,7 @@ import './App.css'
 import ZombieFighterList from './components/ZombieFighterList/ZombieFighterList.jsx'
 
 const App = () => {
-  const zombieFightersArray =[{
+  const zombieFighters =[{
     name: 'Survivor',
     price: 12,
     strength: 6,
@@ -80,7 +80,7 @@ const App = () => {
     const [money, setMoney] = useState(100)
     const [totalStrength, setTotalStrength] =useState(0)
     const [totalAgility, setTotalAgility] =useState(0)
-    const [zombieFighters, setZombieFighters] = useState(zombieFightersArray);
+   
    
     const handleAddFighter =(fighter) => {
 
